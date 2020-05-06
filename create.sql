@@ -67,7 +67,17 @@ ALTER TABLE songsartists
     NOT DEFERRABLE;
 
 
+CREATE SEQUENCE art_seq START WITH 1;
 
+CREATE OR REPLACE TRIGGER art_bir 
+BEFORE INSERT ON artists 
+FOR EACH ROW
+
+BEGIN
+  SELECT dept_seq.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
 -- Oracle SQL Developer Data Modeler Summary Report: 
 -- 
 -- CREATE TABLE                             4
