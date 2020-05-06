@@ -6,7 +6,7 @@
 
 
 CREATE TABLE artists (
-    artist_id  INTEGER NOT NULL,
+    artist_id  INTEGER NOT NULL AUTO_INCREMENT,
     name       CHAR(20)
 )
 LOGGING;
@@ -14,7 +14,7 @@ LOGGING;
 ALTER TABLE artists ADD CONSTRAINT artist_pk PRIMARY KEY ( artist_id );
 
 CREATE TABLE genres (
-    genre_id  INTEGER NOT NULL,
+    genre_id  INTEGER NOT NULL AUTO_INCREMENT,
     name      CHAR(20)
 )
 LOGGING;
@@ -24,19 +24,19 @@ ALTER TABLE genres ADD CONSTRAINT genre_pk PRIMARY KEY ( genre_id );
 ALTER TABLE genres ADD CONSTRAINT genres__un UNIQUE ( name );
 
 CREATE TABLE songs (
-    song_id        INTEGER NOT NULL,
+    song_id        INTEGER NOT NULL AUTO_INCREMENT,
     title          CHAR(20),
     genre_id       INTEGER NOT NULL,
-    beats_per_min  INTEGER,
-    energy         INTEGER,
-    danceability   INTEGER,
-    loudness       INTEGER,
-    liveness       INTEGER,
-    valence        INTEGER,
-    length         INTEGER,
-    acousticness   INTEGER,
-    speechiness    INTEGER,
-    popularity     INTEGER
+    beats_per_min  INTEGER DEFAULT 0,
+    energy         INTEGER DEFAULT 0,
+    danceability   INTEGER DEFAULT 0,
+    loudness       INTEGER DEFAULT 0,
+    liveness       INTEGER DEFAULT 0,
+    valence        INTEGER DEFAULT 0,
+    length         INTEGER DEFAULT 0,
+    acousticness   INTEGER DEFAULT 0,
+    speechiness    INTEGER DEFAULT 0,
+    popularity     INTEGER DEFAULT 0
 )
 LOGGING;
 
