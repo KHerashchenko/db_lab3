@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="my_db_model_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="4DE36FE1-9F16-CC66-F5D6-F0B92F533A7A">
+<createdBy>Катя</createdBy>
+<createdTime>2020-05-06 12:01:29 UTC</createdTime>
+<ownerDesignName>db_model</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>my_db_model_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_20" id="F3DFCDBF-5587-7CFB-3219-F2CE1A1E459A">
+<createdBy>Катя</createdBy>
+<createdTime>2020-05-06 12:01:29 UTC</createdTime>
+<ownerDesignName>db_model</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>my_db_model_Domains</fileName>
+<logicalDatatype>LOGDT025</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>
