@@ -20,6 +20,12 @@ for i,genre in enumerate(data["Genre"].unique()):
     print(query)
 print(genres_id)
 
+for i, artist in enumerate(data["Artist.Name"].unique()):
+    query = "INSERT INTO Artists(artist_id, name) VALUES({}, '{}')".format(i+4, artist)
+    cursor.execute(query)
+    connection.commit()
+    print(query)
+import numpy as np
 
 for song in np.array(data[['Track.Name', 'Genre','Beats.Per.Minute',
        'Energy', 'Danceability', 'Loudness', 'Liveness', 'Valence', 'Length',
@@ -46,13 +52,6 @@ for song in np.array(data[['Track.Name', 'Genre','Beats.Per.Minute',
     cursor.execute(query)
     connection.commit()
     print(query)
-
-for i, artist in enumerate(data["Artist.Name"].unique()):
-    query = "INSERT INTO Artists(artist_id, name) VALUES({}, '{}')".format(i+4, artist)
-    cursor.execute(query)
-    connection.commit()
-    print(query)
-import numpy as np
 
 import random
 for song in range(6,27):
